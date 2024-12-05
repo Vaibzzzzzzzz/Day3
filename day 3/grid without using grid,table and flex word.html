@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 Layout with Images</title>
+    <style>
+        .container {
+            width: 600px;   /* Width of the entire container */
+            height: 600px;  /* Height of the entire container */
+            margin: 0 auto; /* Center the container horizontally */
+            position: relative;
+        }
+
+        .row {
+            width: 100%;       /* Row takes full width of the container */
+            height: 33.33%;    /* Row takes 1/3 of the height */
+            display: block;    /* Stack the rows vertically */
+        }
+
+        .cell {
+            width: 33.33%;    /* Each cell takes 1/3 of the row's width */
+            height: 100%;     /* Cell fills the entire height of the row */
+            float: left;      /* Position the cells side by side */
+            border: 1px solid black;  /* Border for each cell */
+            box-sizing: border-box;
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .cell img {
+            width: 100%;      /* Make the image fill the entire cell width */
+            height: 100%;     /* Make the image fill the entire cell height */
+            object-fit: cover; /* Ensures the image covers the cell without distorting */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTFcsgYjCJ4WH_OtJF70xHXuENkVUzSdoE6Q&s" alt="Image 1"></div>
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXgjnsQNJ4Cr9nd8LiF1Fugg9ZQqzSkcmxMw&s" alt="Image 2"></div>
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJXNfIp81eFfGC-l42yGYjvvTw-02ybn5tDA&s" alt="Image 3"></div>
+        </div>
+        <div class="row">
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs99jqKnqv2iHK2viF3udmBXB0U3O3XpN5yg&s" alt="Image 4"></div>
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkEXbXM2xKNyNrHoQ0JTXwvl4mqNzp4_Aig&s" alt="Image 5"></div>
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4wHBoUh7YGeZ6wzo5_0tVI9kFeLD-L7d_XA&s" alt="Image 6"></div>
+        </div>
+        <div class="row">
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRMeYxgdN46CMLlMZuAPEsEPdVotIXjDvQBQ&s" alt="Image 7"></div>
+            <div class="cell"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZm-AM9w6iVgKxLzpCUoYQRV9S6zeaDRahRQ&s" alt="Image 8"></div>
+            <div class="cell"><img src="data:image/jpeg;base64,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" alt="Image 9"></div>
+        </div>
+    </div>
+
+</body>
+</html>
